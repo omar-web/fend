@@ -53,16 +53,15 @@ for (let index = 1; index <= sectionsNum.length; index++) {
 
   //
   // adding active styling on scroll for both header's nav and sections
+  // attributed  https://nfpdiscussions.udacity.com/t/code-active-section/201506/3  i fully understand the code , the  " getBoundingClientRect(). " is what i needed help with before finding it
   window.addEventListener("scroll", function () {
     for (let i = 0; i < sectionsNum.length; i++) {
       if (
-        sectionsNum[i].getBoundingClientRect().bottom > 200 &&
-        sectionsNum[i].getBoundingClientRect().top < 150
+        sectionsNum[i].getBoundingClientRect().top > 0 &&
+        sectionsNum[i].getBoundingClientRect().top < 600
       ) {
         sectionsNum[i].classList.add("your-active-class");
-
         const activeElements = sectionsNum[i].getAttribute("id");
-
         const links = document.getElementsByTagName("a");
 
         for (let i = 0; i < links.length; i++) {

@@ -61,7 +61,8 @@ main {
 
 section {
   position: relative;
-  min-height: 100vh;
+  min-height: 80vh;
+  height: 500px;
 }
 
 /* ---- Module Rules ---- */
@@ -94,18 +95,10 @@ section {
 /* Header Styles */
 .page__header {
   background: #fff;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 5;
-}
-@media only screen and (max-width: 35em) {
-  .navbar__menu ul {
-    text-align: center;
-  }
-  .navbar__menu .menu__link {
-    padding: 0.7em 0.5em;
-  }
 }
 
 /* Footer Styles */
